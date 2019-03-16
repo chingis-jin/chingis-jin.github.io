@@ -32,3 +32,15 @@ parent.appendChild(newElement);
 parent.insertBefore(newElement,targetElement.nextSibling);
 }
 }
+
+//返回节点下包含某些name的元素的数组
+function chooseEl(elArry,fatherEl) {
+    var i = 0;
+    var childArry = [];
+    for (i;i<elArry.length;i++){
+        if (elArry[i].parentNode.parentNode === fatherEl){
+            childArry.push(elArry[i]);
+        }else{}
+    }
+    return childArry;
+}
